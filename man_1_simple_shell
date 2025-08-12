@@ -1,0 +1,6 @@
+.TH HSH 1
+.SH NAME
+Holberton Shell is a shell written from scratch using C and a limited subset of commonly used libraries.
+.SH SYNOPSYS
+.B hsh
+.IR file
