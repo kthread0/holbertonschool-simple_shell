@@ -1,5 +1,5 @@
 CC = gcc
-OPTIONS = -march=native -O2 -flto -Wall -Werror -Wextra -pedantic -std=gnu89 -pipe
+OPTIONS = -march=native -O2 -flto -Wall -Werror -Wextra -pedantic -std=gnu89 -g3 -ggdb3 -pipe
 FILES = $(wildcard *.c)
 
 build: $(FILES)
