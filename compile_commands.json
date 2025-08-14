@@ -1,0 +1,23 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-march=native",
+      "-O2",
+      "-flto",
+      "-Wall",
+      "-Werror",
+      "-Wextra",
+      "-pedantic",
+      "-std=gnu89",
+      "-pipe",
+      "-o",
+      "hsh",
+      "main.c"
+    ],
+    "directory": "/home/kptr/Projects/holbertonschool-simple_shell",
+    "file": "/home/kptr/Projects/holbertonschool-simple_shell/main.c",
+    "output": "/home/kptr/Projects/holbertonschool-simple_shell/hsh"
+  }
+]
