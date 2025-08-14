@@ -1,6 +1,6 @@
 #include "shell.h"
 
 int main(void) {
-	printf("Hello World\n");
+	read_line();
 	return 0;
 }
