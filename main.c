@@ -5,8 +5,6 @@
 int main(int argc, char *argv[]) {
 	FILE *stream;
 	char *line = NULL;
-	size_t len = 0;
-	ssize_t nread = 0;
 
 	if (argc != 2) {
 		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
