@@ -7,14 +7,13 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 #include <unistd.h>
 
 /* Our own libaries */
 
 /* Our functions */
 
-int get_pid(void);
-int shell_loop(void);
-char *read_line(void);
+void exec(char **argv);
 
 #endif /* SHELL_H */
