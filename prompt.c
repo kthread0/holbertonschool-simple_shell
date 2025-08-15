@@ -1,30 +1,17 @@
 #include "shell.h"
 
-int prompt(void) {
-	int ac = 0;
-	char **av = 0;
+int prompt(char *argv[]) {
+	char *in = NULL;
+	/* printf("$ "); */
 
-	char *ps1 = "(Stranger Strings) $ ";
-	char *lineptr;
-	size_t n = 0;
-	ssize_t nchars_read;
+	execvp(in, argv);
 
-	(void)ac;
-	(void)av;
-
-	while (1) {
-		printf("%s", ps1);
-		nchars_read = getline(&lineptr, &n, stdin);
-
-		if (nchars_read == -1) {
-			printf("Exit \n");
-			return (-1);
-		}
-
-		printf("%s", lineptr);
+	if (fork() == 0) {
+		perror("execvp failed");
+		exit(EXIT_FAILURE);
+	} else {
+		wait(NULL);
 	}
-
-	free(lineptr);
 
 	return (0);
 }

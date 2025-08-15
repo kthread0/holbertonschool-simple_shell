@@ -4,9 +4,11 @@
 #define BUFFER_SIZE 4096
 
 /* Standard libraries */
+#include <linux/limits.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/wait.h>
 #include <unistd.h>
 
@@ -14,7 +16,6 @@
 
 /* Our functions */
 
-void exec(char **argv);
-int prompt(void);
+int prompt(char *argv[]);
 
 #endif /* SHELL_H */
