@@ -15,6 +15,6 @@
 /* Our functions */
 
 void exec(char **argv);
-int prompt(int ac, char **av);
+int prompt(void);
 
 #endif /* SHELL_H */
