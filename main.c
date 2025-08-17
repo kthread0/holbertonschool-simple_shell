@@ -21,7 +21,7 @@ int main(void)
 		if (input == -1)
 			break; /* EOF o error */
 
-		/* Eliminar salto de l√≠nea al fina */
+		/* Eliminar salto de li≠nea al finl */
 		if (lineptr[input - 1] == '\n')
 			lineptr[input - 1] = '\0';
 
@@ -29,11 +29,11 @@ int main(void)
 		if (strcmp(lineptr, "exit") == 0)
 			break;
 
-		/* Ignorar l√≠neas vac√≠a*/
+		/* Ignorar li≠neas acias */
 		if (lineptr[0] == '\0')
 			continue;
 
-		/* Llamamos a prompt con la l√≠nea que el usuario escribi√*/
+		/* Llamamos a prompt con la li≠nea que el usuario escrie */
 		prompt(lineptr);
 	}
 
