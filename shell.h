@@ -12,10 +12,7 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-/* Our own libaries */
-
-/* Our functions */
-
-int prompt(char *argv[]);
+/* Function prototype */
+int prompt(char *line);
 
 #endif /* SHELL_H */
