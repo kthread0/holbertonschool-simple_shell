@@ -21,7 +21,7 @@ int main(void)
 		if (input == -1)
 			break; /* EOF o error */
 
-		/* Eliminar salto de li­nea al finl */
+		/* Eliminar salto de linea al final */
 		if (lineptr[input - 1] == '\n')
 			lineptr[input - 1] = '\0';
 
@@ -29,11 +29,11 @@ int main(void)
 		if (strcmp(lineptr, "exit") == 0)
 			break;
 
-		/* Ignorar li­neas acias */
+		/* Ignorar lineas vacias */
 		if (lineptr[0] == '\0')
 			continue;
 
-		/* Llamamos a prompt con la li­nea que el usuario escrie */
+		/* Llamamos a prompt con la linea que el usuario escribe */
 		prompt(lineptr);
 	}
 
