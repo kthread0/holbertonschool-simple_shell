@@ -13,9 +13,13 @@ int main(void)
 	size_t n = 0; /* Variable para el tamaÃo del buffer de lineptr */
 	ssize_t input; /* Variable para almacenar el numero de caracter leido */
 
+
+
 	while (1) /* Bucle infinito para mantener el shell activo */
 	{
-		printf("Stranger Strings> "); /* Prompt */
+		if (isatty(STDIN_FILENO))
+			fprintf(stderr, "Stranger Strings> "); /* Prompt */
+		
 		input = getline(&lineptr, &n, stdin); /* Lee la linea de entrada del usuario */
 
 		if (input == -1) /* Verifica si hubo error o fin de archivo (EOF) al leer */
