@@ -19,21 +19,17 @@ int main(void)
 		input = getline(&lineptr, &n, stdin);
 
 		if (input == -1)
-			break; /* EOF o error */
+			break;
 
-		/* Eliminar salto de linea al final */
 		if (lineptr[input - 1] == '\n')
 			lineptr[input - 1] = '\0';
 
-		/* Salir si el usuario escribe "exit" */
 		if (strcmp(lineptr, "exit") == 0)
 			break;
 
-		/* Ignorar lineas vacias */
 		if (lineptr[0] == '\0')
 			continue;
 
-		/* Llamamos a prompt con la linea que el usuario escribe */
 		prompt(lineptr);
 	}
 
