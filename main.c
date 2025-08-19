@@ -17,8 +17,7 @@ int main(void)
 
 	while (1) /* Bucle infinito para mantener el shell activo */
 	{
-		if (isatty(STDIN_FILENO))
-			fprintf(stderr, "Stranger Strings> "); /* Prompt */
+			printf("Stranger Strings> "); /* Prompt */
 		
 		input = getline(&lineptr, &n, stdin); /* Lee la linea de entrada del usuario */
 
