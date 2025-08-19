@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * main - PID
+ * get_pid - this functions calls for the pid and prints in the console
  *
  * Return: Always 0.
  */
