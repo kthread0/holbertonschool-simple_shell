@@ -28,8 +28,8 @@ int prompt(char *line)
 	{
 		execvp(argv[0], argv); /* Proceso hijo: ejecuta el comando con sus argumentos */
 
-		perror("execvp failed"); /* Si execvp falla, se muestra un error y termina el hijo */
-		exit(EXIT_FAILURE); /* Termina el proceso hijo con un codigo de fallo */
+		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]); /* Si falla, se muestra un error y termina el hijo */
+		exit(127); /* Termina el proceso hijo con un codigo de fallo */
 	}
 	else /* Se ejecuta en el proceso padre */
 	{
