@@ -5,7 +5,8 @@
  *
  * Return: Always 0.
  */
-int get_pid(void) {
+int get_pid(void)
+{
 	pid_t pid;
 
 	pid = getpid();

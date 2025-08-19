@@ -5,5 +5,5 @@ FILES = $(wildcard *.c)
 build: $(FILES)
 	$(CC) $(OPTIONS) $(FILES) -o hsh
 
-clean: 
+clean:
 	rm -v hsh
