@@ -21,6 +21,7 @@ int prompt(char *line)
 		token = strtok(NULL, " \n"); /* Obtiene el siguiente token en la linea */
 	}
 	argv[i] = NULL; /* Termina el arreglo con NULL como pide execvp */
+
 	if (argv[0] == NULL) /* Si la l√≠nea esta vac√a, no hace nada */
 		return (0);
 
