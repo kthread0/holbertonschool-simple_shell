@@ -10,27 +10,27 @@
  */
 int prompt(char *line)
 {
-	char *argv[10];
-	int i = 0;
-	char *token;
+	char *argv[10]; /* Arreglo para almacenar los argumentos del comando */
+	int i = 0; /* Contador para iterar sobre los argumentos */
+	char *token; /* Puntero para almacenar cada segmento de la linea */
 
-	token = strtok(line, " \n");
-	while (token != NULL && i < 9)
+	token = strtok(line, " \n"); /* Divide la linea en tokens separados por espacio */
+	while (token != NULL && i < 9) /* Itera mientras haya tokens y espacio en el arreglo */
 	{
-		argv[i++] = token;
-		token = strtok(NULL, " \n");
+		argv[i++] = token; /* Guarda cada token en argv */
+		token = strtok(NULL, " \n"); /* Obtiene el siguiente token en la linea */
 	}
-	argv[i] = NULL;
-	if (fork() == 0)
+	argv[i] = NULL; /* Termina el arreglo con NULL como pide execvp */
+	if (fork() == 0) /* Crea un proceso hijo para ejecutar el comando */
 	{
-		execvp(argv[0], argv);
+		execvp(argv[0], argv); /* Proceso hijo: ejecuta el comando con sus argumentos */
 
-		perror("execvp failed");
-		exit(EXIT_FAILURE);
+		perror("execvp failed"); /* Si execvp falla, se muestra un error y termina el hijo */
+		exit(EXIT_FAILURE); /* Termina el proceso hijo con un codigo de fallo */
 	}
-	else
+	else /* Se ejecuta en el proceso padre */
 	{
-		wait(NULL);
+		wait(NULL); /* El padre espera a que el proceso hijo termine */
 	}
 
 	return (0);
