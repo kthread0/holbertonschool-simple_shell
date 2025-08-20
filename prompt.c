@@ -34,7 +34,11 @@ int prompt(char *line)
 	}
 	else /* Se ejecuta en el proceso padre */
 	{
-		wait(NULL); /* El padre espera a que el proceso hijo termine */
+		int status;
+		waitpid(-1, &status, 0); /* El padre espera al hijo y guarda el estado */
+
+		if (WIFEXITED(status))
+			return WEXITSTATUS(status); /* Devuelve el código de salida real del hijo */
 	}
 
 	return (0);
