@@ -16,6 +16,8 @@ int prompt(char *line)
 	/* Contador para iterar sobre los argumentos */
 	char *token;
 	/* Puntero para almacenar cada segmento de la linea */
+	int status;
+	pid_t child_pid;
 
 	token = strtok(line, " \n");
 	/* Divide la linea en tokens separados por espacio */
@@ -52,7 +54,6 @@ int prompt(char *line)
 
 	else /* Se ejecuta en el proceso padre */
 	{
-		int status;
 		waitpid(child_pid, &status, 0);
 		/* El padre espera al hijo y guarda el estado */
 
