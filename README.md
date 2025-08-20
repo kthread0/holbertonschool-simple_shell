@@ -83,7 +83,13 @@ otherwise the user can use the absolute path of said executable to skip the look
 
 - Header/platform symbols used
   - STDIN_FILENO (unistd.h)
-
+  - stdbool.h
+  - stdio.h
+  - stdlib.h
+  - string.h
+  - sys/wait.h
+  - linux/limits.h
+    
 ### References (official documentation)
 
 - POSIX getline: https://pubs.opengroup.org/onlinepubs/9699919799/functions/getline.html
