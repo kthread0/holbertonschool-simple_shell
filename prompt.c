@@ -36,7 +36,7 @@ int prompt(char *line)
 		/* Si la l√≠nea esta vac√a, no hace nada */
 		return (0);
 
-	pid_t child_pid = fork(); /* Guarda el PID del hijo */
+	child_pid = fork(); /* Guarda el PID del hijo */
 
 	if (child_pid == -1) /* Error al crear el proceso hijo */
 	{
