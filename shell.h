@@ -14,5 +14,5 @@
 
 /* Function prototype */
 int prompt(char *line);
-
+int get_pid(void);
 #endif /* SHELL_H */
