@@ -8,26 +8,28 @@ This is our final project for Holberton School's first trimester, written in C f
 # Table of contents
 
 1. [What?](#What?)
-2. [Technicals](#Technicals)
+2. [Technical](#Technical)
 4. [Usage](#Usage)
 
 
 ## What?
+- What is a shell?
+A shell is a command line interface that has been existing since computers could use a teletypewriter (TTY), an user inputs a command and it gets looked up using PATH if using the name of the command alone,
+```bash
+echo "Hello World!"
+```
+otherwise the user can use the absolute path of said executable to skip the lookup in PATH, for whatever reason it might be needed (scripts for systems that might have different functionality, etc
+```bash
+/usr/bin/echo "Hello World!"
+```
 
-## Technicals
-
-### Codebase overview
+## Technical
 
 ### File structure
 
 ```
 ./
 ├── AUTHORS
-├── .cache/
-│   └── clangd/
-│       └── index/
-│           ├── main.c.AD20CA1C3CD09EB2.idx
-│           └── shell.h.675DC2756834FE34.idx
 ├── .clang-format
 ├── compile_commands.json
 ├── .gitignore
@@ -39,8 +41,6 @@ This is our final project for Holberton School's first trimester, written in C f
 ├── prompt.c
 ├── README.md
 └── shell.h
-
-4 directories, 14 files
 ```
 
 ### Functions defined (by file)
@@ -56,7 +56,6 @@ This is our final project for Holberton School's first trimester, written in C f
 
 - shell.h
   - int prompt(char *line); (prototype)
-  - Macro: BUFFER_SIZE (4096) — currently unused
 
 ### Functions used (external/library calls), by file
 
@@ -100,4 +99,8 @@ This is our final project for Holberton School's first trimester, written in C f
 You can execute something using our shell by doing the following:
 ```bash
 ./shell <file>
+```
+or straight up using our shell by executing everything inside it
+```bash
+./shell
 ```
