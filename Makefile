@@ -3,7 +3,7 @@ OPTIONS = -march=native -Og -flto -Wall -Werror -Wextra -pedantic -std=gnu89 -g3
 FILES = $(wildcard *.c)
 
 build: $(FILES)
-	$(CC) $(OPTIONS) $(FILES) -o hsh
+	$(CC) $(OPTIONS) $(FILES) -o shell
 
 clean:
-	rm -v hsh
+	rm -v shell
