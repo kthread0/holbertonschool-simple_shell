@@ -12,8 +12,10 @@ This is our final project for Holberton School's first trimester, written in C f
 4. [Usage](#Usage)
 
 
-## What?
-- What is a shell?
+## What...
+
+### is a shell?
+
 A shell is a command line interface that has been existing since computers could use a teletypewriter (TTY), an user inputs a command and it gets looked up using PATH if using the name of the command alone,
 ```bash
 echo "Hello World!"
