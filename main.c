@@ -15,7 +15,7 @@ int main(void)
 	/* Variable para el tamaÃo del buffer de lineptr */
 	ssize_t input;
 	/* Variable para almacenar el numero de caracter leido */
-
+	int last_status = 0;
 
 
 	while (1)
@@ -39,16 +39,17 @@ int main(void)
 		/* Reemplaza el salto de linea al final por un nulo */
 
 		if (strcmp(lineptr, "exit") == 0)
-			/* Compara si la entrada es "exit" */
-			break;
-		/* Sale del bucle si el usuario escribio "exit" */
+		{
+			free(lineptr);
+			exit(last_status);
 
+		}
 		if (lineptr[0] == '\0')
 			/* Comprueba si la linea esta vacia (primer caracter nulo) */
 			continue;
 		/* Salta a la siguiente iteracion del bucle */
 
-		prompt(lineptr);
+		last_status = prompt(lineptr);
 		/* Llamamos a prompt con la linea que el usuario escribe */
 	}
 
