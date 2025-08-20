@@ -48,47 +48,47 @@ otherwise the user can use the absolute path of said executable to skip the look
 ### Functions defined (by file)
 
 - main.c
-  - int main(void)
+  - `int main(void)`
 
 - prompt.c
-  - int prompt(char *line)
+  - `int prompt(char *line)`
 
 - pid.c
-  - int get_pid(void)
+  - `int get_pid(void)`
 
 - shell.h
-  - int prompt(char *line); (prototype)
+  - `int prompt(char *line)`
 
 ### Functions used (external/library calls), by file
 
 - main.c
-  - isatty(int fd)
-  - fprintf(FILE *stream, const char *format, ...)
-  - getline(char **lineptr, size_t *n, FILE *stream)
-  - strcmp(const char *s1, const char *s2)
-  - prompt(char *line)  [project-local]
-  - free(void *ptr)
+  - `isatty(int fd)`
+  - `fprintf(FILE *stream, const char *format, ...)`
+  - `getline(char **lineptr, size_t *n, FILE *stream)`
+  - `strcmp(const char *s1, const char *s2)`
+  - `prompt(char *line)`
+  - `free(void *ptr)`
 
 - prompt.c
-  - strtok(char *restrict s, const char *restrict sep)
-  - fork(void)
-  - execvp(const char *file, char *const argv[])
-  - fprintf(FILE *stream, const char *format, ...)
-  - exit(int status)
-  - wait(int *wstatus)
+  - `strtok(char *restrict s, const char *restrict sep)`
+  - `fork(void)`
+  - `execvp(const char *file, char *const argv[])`
+  - `fprintf(FILE *stream, const char *format, ...)`
+  - `exit(int status)`
+  - `wait(int *wstatus)`
 
 - pid.c
-  - getpid(void)
-  - printf(const char *format, ...)
+  - `getpid(void)`
+  - `printf(const char *format, ...)`
 
 - Header/platform symbols used
-  - STDIN_FILENO (unistd.h)
-  - stdbool.h
-  - stdio.h
-  - stdlib.h
-  - string.h
-  - sys/wait.h
-  - linux/limits.h
+  - `STDIN_FILENO (unistd.h)`
+  - `stdbool.h`
+  - `stdio.h`
+  - `stdlib.h`
+  - `string.h`
+  - `sys/wait.h`
+  - `linux/limits.h`
     
 ### References (official documentation)
 
