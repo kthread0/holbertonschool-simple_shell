@@ -59,7 +59,7 @@ int prompt(char *line)
 
 		if (WIFEXITED(status))
 			return WEXITSTATUS(status);
-		/* Devuelve el cÃ³digo de salida real del hijo */
+		/* Devuelve el codigo de salida real del hijo */
 	}
 
 	return (0);
