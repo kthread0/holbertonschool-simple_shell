@@ -8,6 +8,7 @@
  *
  * Return: 0 en caso de exito.
  */
+
 int prompt(char *line)
 {
 	char *argv[10];
@@ -47,7 +48,7 @@ int prompt(char *line)
 		waitpid(child_pid, &status, 0);
 
 		if (WIFEXITED(status))
-			return WEXITSTATUS(status);
+			return (WEXITSTATUS(status));
 	}
 
 	return (0);

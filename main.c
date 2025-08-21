@@ -7,6 +7,7 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char *lineptr = NULL;
@@ -18,7 +19,8 @@ int main(void)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-			fprintf(stderr, "Stranger Strings> "); 
+			fprintf(stderr, "Stranger Strings> ");
+
 		input = getline(&lineptr, &n, stdin);
 
 		if (input == -1)
@@ -40,5 +42,5 @@ int main(void)
 	}
 
 	free(lineptr);
-	return (0);
+	return (last_status);
 }
