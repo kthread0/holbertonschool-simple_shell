@@ -49,7 +49,7 @@ int prompt(char *line)
 		execvp(argv[0], argv); /* Ejecuta el comando con sus argumentos */
 		/* Si execvp falla */
 		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
-		exit(127); /* CÃ³digo de fallo si no se encontrÃ³ el coman */
+		exit(127); /* Codigo de fallo si no se encuentra el comando */
 	}
 
 	else /* Se ejecuta en el proceso padre */
