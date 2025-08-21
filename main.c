@@ -12,7 +12,7 @@ int main(void)
 	char *lineptr = NULL;
 	/* Puntero para almacenar la linea leida del usuario */
 	size_t n = 0;
-	/* Variable para el tamaÃo del buffer de lineptr */
+	/* Variable para el tamaÃ±o del buffer de lineptr */
 	ssize_t input;
 	/* Variable para almacenar el numero de caracter leido */
 	int last_status = 0;
@@ -22,7 +22,7 @@ int main(void)
 		/* Bucle infinito para mantener el shell activo */
 	{
 		if (isatty(STDIN_FILENO))
-			/* Verifica si la entrada estaÃndar es un terminal*/
+			/* Verifica si la entrada estandar es un terminal*/
 			fprintf(stderr, "Stranger Strings> "); 
 		/* Prompt en stderr*/
 		input = getline(&lineptr, &n, stdin);
