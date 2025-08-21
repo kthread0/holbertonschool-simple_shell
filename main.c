@@ -12,7 +12,7 @@ int main(void)
 	char *lineptr = NULL;
 	/* Puntero para almacenar la linea leida del usuario */
 	size_t n = 0;
-	/* Variable para el tama√Éo del buffer de lineptr */
+	/* Variable para el tama√o del buffer de lineptr */
 	ssize_t input;
 	/* Variable para almacenar el numero de caracter leido */
 	int last_status = 0;
@@ -39,10 +39,12 @@ int main(void)
 		/* Reemplaza el salto de linea al final por un nulo */
 
 		if (strcmp(lineptr, "exit") == 0)
+		/* verifica si el comando ingresado es "exit" */
 		{
 			free(lineptr);
+			/* libera la memoria asignada a lineptr */
 			exit(last_status);
-
+			/* termina el programa devolviendo el ultimo estado */
 		}
 		if (lineptr[0] == '\0')
 			/* Comprueba si la linea esta vacia (primer caracter nulo) */
