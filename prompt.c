@@ -33,7 +33,7 @@ int prompt(char *line)
 	/* Termina el arreglo con NULL como pide execvp */
 
 	if (argv[0] == NULL)
-		/* Si la línea esta vac�a, no hace nada */
+		/* Si la linea esta vacia, no hace nada */
 		return (0);
 
 	child_pid = fork(); /* Guarda el PID del hijo */
@@ -49,7 +49,7 @@ int prompt(char *line)
 		execvp(argv[0], argv); /* Ejecuta el comando con sus argumentos */
 		/* Si execvp falla */
 		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
-		exit(127); /* Código de fallo si no se encontró el coman */
+		exit(127); /* CÃ³digo de fallo si no se encontrÃ³ el coman */
 	}
 
 	else /* Se ejecuta en el proceso padre */
@@ -59,7 +59,7 @@ int prompt(char *line)
 
 		if (WIFEXITED(status))
 			return WEXITSTATUS(status);
-		/* Devuelve el código de salida real del hijo */
+		/* Devuelve el cÃ³digo de salida real del hijo */
 	}
 
 	return (0);
