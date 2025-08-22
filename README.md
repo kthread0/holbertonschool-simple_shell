@@ -89,7 +89,7 @@ otherwise the user can use the absolute path of said executable to skip the look
   - `string.h`
   - `sys/wait.h`
   - `linux/limits.h`
-    
+
 ### References (official documentation)
 
 - POSIX getline: https://pubs.opengroup.org/onlinepubs/9699919799/functions/getline.html
