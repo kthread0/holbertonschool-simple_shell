@@ -3,7 +3,7 @@
 /**
  * prompt - procesa la linea de entrada,
  * crea un proceso hijo y ejecuta el comando ingresado.
- * @line: linea de entrada del usuario
+ * @line: linea de entrada del usuario.
  *
  * Return: 0 en caso de exito.
  */
