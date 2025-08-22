@@ -1,26 +1,18 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-/* Librerías estándar */
+#define BUFFER_SIZE 4096
+
+/* Standard libraries */
+#include <linux/limits.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
 #include <sys/wait.h>
+#include <unistd.h>
 
-/* Variable global de entorno */
-extern char **environ;
-
-/* -------- Prototipos -------- */
-
-/* prompt.c */
-int token_input(char *line, char **argv);
-char *find_command(char *cmd);
-int execute_child(char *cmd_path, char **argv);
+/* Function prototype */
 int prompt(char *line);
-
-/* get_pid.c */
 int get_pid(void);
-
 #endif /* SHELL_H */
