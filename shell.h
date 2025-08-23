@@ -15,4 +15,6 @@
 /* Function prototype */
 int prompt(char *line);
 int get_pid(void);
+int command_exists(const char *cmd);
+
 #endif /* SHELL_H */
