@@ -36,6 +36,14 @@ int prompt(char *line)
 
 	if (child_pid == 0)
 	{
+		char *path = getenv("PATH");
+
+		if ((!path || path[0] == '\0') && strchr(argv[0], '/') == NULL)
+		{
+			fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
+			exit(127);
+		}
+
 		execvp(argv[0], argv);
 		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
 		exit(127);
