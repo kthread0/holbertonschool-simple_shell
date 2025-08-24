@@ -18,4 +18,7 @@ int get_pid(void);
 void parse_line(char *line, char **argv);
 void exec_command(char **argv);
 
+/* Global environment variable */
+extern char **environ;
+
 #endif /* SHELL_H */

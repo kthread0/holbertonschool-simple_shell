@@ -49,12 +49,19 @@ void exec_command(char **argv)
 int prompt(char *line)
 {
 	char *argv[10];
-	int status;
+	int status, i;
 	pid_t child_pid;
 
 	parse_line(line, argv);
 	if (!argv[0])
 		return (0);
+
+	if (strcmp(argv[0], "env") == 0)
+	{
+		for (i = 0; environ[i]; i++)
+			printf("%s\n", environ[i]);
+		return (0);
+	}
 
 	child_pid = fork();
 	if (child_pid == -1)
