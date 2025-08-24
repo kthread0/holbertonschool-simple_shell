@@ -16,7 +16,6 @@
 int prompt(char *line);
 int get_pid(void);
 void parse_line(char *line, char **argv);
-int command_exists(char *cmd);
 void exec_command(char **argv);
 
 #endif /* SHELL_H */
