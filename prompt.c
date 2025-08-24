@@ -63,6 +63,17 @@ int command_exists(char *cmd)
  */
 void exec_command(char **argv)
 {
+	char *path = getenv("PATH");
+
+	if ((!path || path[0] == '\0') && strchr(argv[0], '/') == NULL)
+	{
+		char full_path[256];
+
+		snprintf(full_path, sizeof(full_path), "/bin/%s", argv[0]);
+		execv(full_path, argv);
+		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
+		exit(127);
+	}
 	execvp(argv[0], argv);
 	fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
 	exit(127);
@@ -87,7 +98,6 @@ int prompt(char *line)
 	if (argv[0] == NULL)
 		return (0);
 
-	/* 🔎 Verificar existencia ANTES de fork */
 	if (!command_exists(argv[0]))
 	{
 		fprintf(stderr, "./hsh: 1: %s: not found\n", argv[0]);
