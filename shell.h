@@ -15,5 +15,7 @@
 /* Function prototype */
 int prompt(char *line);
 int get_pid(void);
+void parse_line(char *line, char **argv);
+void exec_command(char **argv);
 
 #endif /* SHELL_H */
