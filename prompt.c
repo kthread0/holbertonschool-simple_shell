@@ -11,7 +11,7 @@ void parse_line(char *line, char **argv)
 	int i = 0;
 
 	token = strtok(line, " \n");
-	while (token != NULL && i < 9)
+	while (token && i < 9)
 	{
 		argv[i++] = token;
 		token = strtok(NULL, " \n");
@@ -53,8 +53,7 @@ int prompt(char *line)
 	pid_t child_pid;
 
 	parse_line(line, argv);
-
-	if (argv[0] == NULL)
+	if (!argv[0])
 		return (0);
 
 	child_pid = fork();
